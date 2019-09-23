@@ -1,0 +1,139 @@
+body{
+	font: 12pt Verdana, sans-serif;
+	background: url('pic/emorg1.png') fixed no-repeat;
+	background-position: 98% bottom;
+	margin: 0;
+	line-height: 140%;
+}
+
+#content{
+	    	width: 1000px;
+		background: #ffc;
+		border-right: 2px solid #bb9;
+		border-bottom: 2px solid #bb9;
+		padding: 40px;
+    		-moz-border-radius-bottomright: 24px;
+		-webkit-border-bottom-right-radius:24px;
+		border-bottom-right-radius:24px;
+	      	text-align: justify;
+}
+
+ul {
+    text-align: justify;
+}
+ul:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+
+li {
+    display: inline-block;
+    position: relative;
+    margin: 0;
+}
+
+#demog li{
+  display: block;
+  margin: 0;
+}
+
+.emo_eval{
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.emo_eval:after{
+    content: "";
+    width: 100%;
+    display: inline-block;
+}
+
+.emo_eval div{
+    width: 75px;
+    height: 20px;
+    border: 1px solid gray;
+    background-color: lightgray;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: top;
+
+    /* IE fix. */
+    *display: inline;
+    zoom: 1;
+}
+
+button{
+    width: 730px;
+    height: 40px;
+		margin-left: 140px;
+
+}
+
+#finish_button, #skip_button{
+  margin-top: 20px;
+  width: 730px;
+  height: 25px;
+}
+
+#word{
+    text-align: center;
+    font-size: 24pt;
+    font-weight: bold;
+    width: 980px;
+    height: 20px;
+    margin-bottom: 20px;
+}
+
+#word_desc{
+    text-align: center;
+    font-size: 12pt;
+    width: 980px;
+    height: 20px;
+}
+
+
+#contact  input, #contact  select {
+float:right;
+display:inline;
+width: 150px;
+}
+
+#contact label {
+    color: #2D2D2D;
+    font-size: 15px;
+    width:400px;
+    display: block;
+}
+
+#contact label div {
+  display: inline-block;
+  position:relative;
+  width: 240px;
+  top:2px;
+  text-align: right;
+}
+
+td{
+	width: 170px;
+	text-align: center;
+}
+
+td.row_desc_l, td.row_desc_r{
+	width: 50px;
+	font-size: 12pt;
+	vertical-align: middle;
+}
+
+td.row_desc_l{
+	text-align: right;
+}
+
+td.row_desc_r{
+	text-align: left;
+}
+
+#about{
+	font: 10pt Verdana, sans-serif;
+	margin: 40px 0 10px;
+}

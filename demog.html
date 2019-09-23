@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Developers Affective Annotated Dictionary</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+      <div id='content'>
+        <div id='demog'>
+          <p class='question'>How long have you worked as a IT specialist?
+            <ul>
+              <li><label><input type="radio" name="years" value="1">less then 1 year</label></li>
+              <li><label><input type="radio" name="years" value="4">2 - 4 years</label></li>
+              <li><label><input type="radio" name="years" value="8">5 - 8 years</label></li>
+              <li><label><input type="radio" name="years" value="14">9 - 14 years</label></li>
+              <li><label><input type="radio" name="years" value="15">more then 15 years</label></li>
+            </ul>
+          </p>
+
+          <p class='question'>Select you current and previous roles in IT projects?
+            <ul>
+              <li><label><input type="checkbox" name="roles" value="1">Programmer</label></li>
+              <li><label><input type="checkbox" name="roles" value="2">Project manager</label></li>
+              <li><label><input type="checkbox" name="roles" value="4">Tester</label></li>
+              <li><label><input type="checkbox" name="roles" value="8">Analyst</label></li>
+              <li><label><input type="checkbox" name="roles" value="16">Architect</label></li>
+              <li><label><input type="checkbox" name="roles" value="32">Designer</label></li>
+              <li><label><input type="checkbox" name="roles" value="64">Other</label></li>
+            </ul>
+          </p>
+        </div>
+
+        <button id='send_button'>Send</button>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type='text/javascript'>
+            $(document).ready(function(){
+                $("#send_button").click(function (event){
+                  var years= $('input[name=years]:radio:checked').val()
+                  var role=0;
+                  $(":checkbox:checked").each(function () {
+                    role+= (1*this.value);
+                  });
+
+                    $.ajax({
+                        type: "POST",
+                        dataType: "text",
+                        data: {'years':years, 'roles':role},
+                        url: "demog.php",
+                        success: function(data) {
+                          window.location.href = "survey.html";
+                        }
+                      });
+
+                });
+
+            });
+        </script>
+    </body>
+</html>
